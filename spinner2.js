@@ -1,12 +1,12 @@
-const spinnerPositions = ['\r|   ', '\r/   ', '\r-   ', '\r\\   '];
+const spinnerPositions = ['|', '/', '-', '\\', '|', '/', '-', '\\', '|'];
 
 let delay = 100;
 
-for (let cycle = 0; cycle < 2; cycle++) {
-  for (let i = 0; i < spinnerPositions.length; i++) {
+  for (let i of spinnerPositions) {
     setTimeout(() => {
-      process.stdout.write(spinnerPositions[i])
+      process.stdout.write('\r' + i + "   ")
     }, delay)
     delay += 200;
   }
-}
+
+  
